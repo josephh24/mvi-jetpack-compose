@@ -1,5 +1,6 @@
 package com.example.mvijetpackcompose.data.network.di
 
+import com.example.mvijetpackcompose.BuildConfig
 import com.example.mvijetpackcompose.data.network.api.GenderApi
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
@@ -27,12 +28,9 @@ object NetworkModule {
                 HttpLoggingInterceptor()
                     .apply {
                         level = HttpLoggingInterceptor.Level.BODY
-                        /*
                         if (BuildConfig.DEBUG) {
                             level = HttpLoggingInterceptor.Level.BODY
                         }
-
-                         */
                     }
             )
             .build()
